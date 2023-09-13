@@ -1,17 +1,19 @@
-Chart Repository
+Repository of macroeconomic charts
 ================
 Franx X. Mohr
 
 ## Introduction
 
 This is a code repository for frequently used plots on macroeconomic
-topics.
+topics using only publicly available data.
+
+The intention is to support knowledge sharing and save time programming.
 
 ## Finding code
 
 ### Copy the repository
 
-Create a local copy of the repositry and open the project.
+Create a local copy of the repository and open the project.
 
 ### Search for tags
 
@@ -20,7 +22,7 @@ Create a local copy of the repositry and open the project.
 tags <- c("rre")
 
 # Load list of tags and associated scripts
-tagindex <- readRDS("tagindex.rds")
+tagindex <- read.csv("tagindex.csv")
 result <- NULL
 for (i in tags) {
   temp <- dplyr::filter(tagindex, tag == i)
@@ -37,7 +39,7 @@ result
 
 ## Adding a new script
 
-Add code for a single plot in a new file in folder `scripts`.
+Add code for a single plot in a new .R-file in the folder `scripts`.
 
 Tag the code using just a comment in the first (!) line of the new
 script.
@@ -48,3 +50,5 @@ Finally, update the index.
 source("functions/update_index.R")
 update_index()
 ```
+
+Feel free to create a pull request, if you want to share your code.
