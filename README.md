@@ -1,17 +1,11 @@
----
-title: "Chart Repository"
-author: "Franx X. Mohr"
-output: github_document
----
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+Chart Repository
+================
+Franx X. Mohr
 
 ## Introduction
 
-This is a code repository for frequently used plots on macroeconomic topics.
-
+This is a code repository for frequently used plots on macroeconomic
+topics.
 
 ## Finding code
 
@@ -21,7 +15,7 @@ Create a local copy of the repositry and open the project.
 
 ### Search for tags
 
-```{r}
+``` r
 # Specify the topics you are intrested in
 tags <- c("rre")
 
@@ -37,16 +31,20 @@ for (i in tags) {
 result
 ```
 
+    ##   tag                       file
+    ## 1 rre     credit_new_by_sector.R
+    ## 2 rre credit_stock_composition.R
+
 ## Adding a new script
 
 Add code for a single plot in a new file in folder `scripts`.
 
-Tag the code using just a comment in the first (!) line of the new script.
+Tag the code using just a comment in the first (!) line of the new
+script.
 
 Finally, update the index.
 
-```{r, results='hide'}
+``` r
 source("functions/update_index.R")
 update_index()
 ```
-
