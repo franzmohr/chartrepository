@@ -16,6 +16,6 @@ update_index <- function() {
     setTxtProgressBar(pb, i / length(file_list))
   }
   
-  saveRDS(result, file = "tagindex.rds") 
+  write.csv(result, file = "tagindex.csv", row.names = FALSE)
   
 }
