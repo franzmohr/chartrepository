@@ -1,24 +1,48 @@
-Repository of macroeconomic charts
+Code repository for macroeconomic charts using R
 ================
 Franx X. Mohr
 
 ## Introduction
 
-This is a code repository for frequently used plots on macroeconomic
-topics using only publicly available data.
+### What this repository tries to do
 
-The intention is to support knowledge sharing and save time programming.
+This is a repository of `R` code, which generates frequently used plots
+on macroeconomic topics based only publicly available data. Most of the
+plots rely on packages from the `tidyverse`. The intention is to support
+knowledge sharing - especially within the EU - and save programming
+time.
 
-## Finding code
+### Motivation
 
-### Copy the repository
+At some point at work you start to lose track of the charts you have
+made over the years. You might need to update some charts very regularly
+and know where to find your highly optimized code. However, there are
+other charts, which you know you made some years ago, but you cannot
+find the code anymore. So you start creating a code repository. But how
+should you organize it?
 
-Create a local copy of the repository and open the project.
+- By topic? But some charts are used for multiple topics. For example,
+  macroeconomic overviews as well as real estate factsheets might use
+  visualisations of house prices. So where to you put the code for those
+  charts, unless you want to duplicate it?
+- By data source? But how do you find all charts used for a specific
+  topic, if you are not aware of all the relevant data sources?
 
-### Search for tags
+In this repository, I propose tags embedded in the first line of a
+script. Those tags can be searched and no further structuring of the
+scripts is necessary. This ensures that the code for one chart is only
+included once and thematic overlaps are possible.
+
+## Usage
+
+### Finding code
+
+- Create a local copy of this repository and open the project.
+- You can use the following code to search the list of tags for a
+  specific topic
 
 ``` r
-# Specify the topics you are intrested in
+# Specify the topics you are interested in
 tags <- c("rre")
 
 # Load list of tags and associated scripts
@@ -37,18 +61,18 @@ result
     ## 1 rre     credit_new_by_sector.R
     ## 2 rre credit_stock_composition.R
 
-## Adding a new script
+- Use the code in the R-files to make your own chart
 
-Add code for a single plot in a new .R-file in the folder `scripts`.
+### Adding a new script
 
-Tag the code using just a comment in the first (!) line of the new
-script.
-
-Finally, update the index.
+- Add code for a single plot in a new .R-file in the folder `scripts`.
+- Tag the code using just a comment in the first (!) line of the new
+  script.
+- Update the index using the following lines
 
 ``` r
 source("functions/update_index.R")
 update_index()
 ```
 
-Feel free to create a pull request, if you want to share your code.
+- Feel free to create a pull request, if you want to share your code.
