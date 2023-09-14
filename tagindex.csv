@@ -9,3 +9,5 @@
 "macro","credit_stock_composition.R"
 "credit","credit_stock_composition.R"
 "rre","credit_stock_composition.R"
+"inflation","inflation_components_for_ea_countries.R"
+"macro","inflation_components_for_ea_countries.R"
