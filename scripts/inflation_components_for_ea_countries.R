@@ -13,20 +13,16 @@ ctry_code <- "AT"
 lang <- "en"
 
 if (lang == "de") {
-  temp_var_levels <- c("SERV", "IGD_NNRG", "NRG", "FOOD")
   temp_var_labels <- c("Dienstleistungen", "Industriegüter ohne Energie",
                        "Energie", "Nahrungsmittel")
-  temp_line_levels <- c("CP00", "TOT_X_NRG_FOOD")
   temp_line_labels <- c("HVPI-Inflation", "Kerninflation (ohne Energie, Nahrungsmittel)")
   temp_title <- paste0("Beitrag zur Inflation (", ctry_code , ")")
   temp_subtitle <- "Inflationsraten in %; Beiträge der Komponenten in Prozentpunkten"
   temp_caption <- "Quelle: Eurostat. Idee: OeNB (2020). Gesamtwirtschaftliche Prognose der OeNB für Österreich 2020 bis 2023."
 }
 if (lang == "en") {
-  temp_var_levels <- c("SERV", "IGD_NNRG", "NRG", "FOOD")
   temp_var_labels <- c("Services", "Non-energy industrial goods",
                        "Energy", "Food including alcohol and tobacco")
-  temp_line_levels <- c("CP00", "TOT_X_NRG_FOOD")
   temp_line_labels <- c("HCPI-inflation", "Core inflation (w/o energy, food)")
   temp_title <- paste0("Contribution to inflation (", ctry_code, ")")
   temp_subtitle <- "Inflation in %; Contribution of component in percentage points"
@@ -36,9 +32,8 @@ if (lang == "en") {
 # Weights
 weights <- get_eurostat(id = "prc_hicp_inw",
                         filters = list(geo = ctry_code,
-                                       coicop = c("FOOD", "NRG", "IGD_NNRG", "SERV")))
-
-weights <- weights %>%
+                                       coicop = c("FOOD", "NRG", "IGD_NNRG", "SERV")),
+                        cache = FALSE) %>%
   mutate(year = substring(time, 1, 4)) %>%
   select(-time) %>%
   rename(weight = values)
@@ -46,7 +41,8 @@ weights <- weights %>%
 # Growth prc_hicp_manr
 index <- get_eurostat(id = "prc_hicp_manr",
                       filters = list(geo = ctry_code,
-                                     coicop = c("CP00", "TOT_X_NRG_FOOD", "FOOD", "NRG", "IGD_NNRG", "SERV"))) %>%
+                                     coicop = c("CP00", "TOT_X_NRG_FOOD", "FOOD", "NRG", "IGD_NNRG", "SERV")),
+                      cache = FALSE) %>%
   mutate(time = as.Date(paste0(as.character(time), "-01"))) %>%
   filter(time >= "2019-01-01",
          !is.na(values)) %>%
@@ -55,18 +51,19 @@ index <- get_eurostat(id = "prc_hicp_manr",
 comp <- index %>%
   filter(!coicop %in% c("CP00", "TOT_X_NRG_FOOD")) %>%
   mutate(year = substring(time, 1, 4)) %>%
+  select(time, values, year, geo, coicop) %>%
   left_join(weights, by = c("year", "geo", "coicop")) %>%
   group_by(time, geo) %>%
   mutate(weight = weight / sum(weight),
          values = values * weight) %>%
   ungroup() %>%
-  mutate(var = factor(coicop, levels = temp_var_levels,
+  mutate(var = factor(coicop, levels = c("SERV", "IGD_NNRG", "NRG", "FOOD"),
                       labels = temp_var_labels))
 
 line <- index %>%
   filter(coicop %in% c("CP00", "TOT_X_NRG_FOOD"),
          !is.na(values)) %>%
-  mutate(line = factor(coicop, levels = temp_line_levels,
+  mutate(line = factor(coicop, levels = c("CP00", "TOT_X_NRG_FOOD"),
                           labels = temp_line_labels))
 
 g <- ggplot(comp, aes(x = time, y = values)) +
@@ -87,4 +84,4 @@ g <- ggplot(comp, aes(x = time, y = values)) +
 
 g
 
-ggsave(g, filename = "figures/inflation_components_for_ea_countries.jpeg", height = 5, width = 7)
+ggsave(g, filename = "figures/inflation_components_for_ea_countries.png", height = 5, width = 7)
