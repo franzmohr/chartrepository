@@ -92,3 +92,5 @@ g <- cowplot::plot_grid(g_credit, g_deposit,
                         rel_widths = c(3, 1))
 
 g
+
+ggsave(g, filename = "figures/bank_interest_rate.png", height = 3.3, width = 11)

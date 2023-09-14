@@ -38,3 +38,5 @@ g <- ggplot(temp, aes(x = date, y = value, fill = name)) +
   theme(axis.title.x = element_blank())
 
 g
+
+ggsave(g, filename = "figures/credit_new_by_sector.png", width = 7)

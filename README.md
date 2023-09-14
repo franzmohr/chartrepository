@@ -65,7 +65,9 @@ result
 
 ### Adding a new script
 
-- Add code for a single plot in a new .R-file in the folder `scripts`.
+- Add code for a single plot in a new R script in the folder `scripts`.
+- Save the resulting chart in a png file in folder `figures`. The file
+  should have the same name as the R script.
 - Tag the code using just a comment in the first (!) line of the new
   script.
 - Update the index using the following lines

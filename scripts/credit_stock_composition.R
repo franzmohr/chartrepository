@@ -52,6 +52,9 @@ g <- ggplot(temp, aes(x = date, y = value, fill = var)) +
   facet_wrap(~name, scales = "free_y") +
   labs(title = temp_title,
        caption = temp_caption) +
-  theme(axis.title.x = element_blank())
+  theme(axis.title.x = element_blank(),
+        legend.position = "bottom")
 
 g
+
+ggsave(g, filename = "figures/credit_stock_composition.png", width = 7)
