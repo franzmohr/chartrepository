@@ -1,6 +1,5 @@
 Code repository for macroeconomic charts using R
 ================
-Franx X. Mohr
 
 ## Introduction
 
@@ -11,6 +10,9 @@ on macroeconomic topics based only publicly available data. Most of the
 plots rely on packages from the `tidyverse`. The intention is to support
 knowledge sharing - especially within the EU - and save programming
 time.
+
+An overview of available charts can be found in subfolder
+[`figures`](/figures)
 
 ### Motivation
 
@@ -57,9 +59,10 @@ for (i in tags) {
 result
 ```
 
-    ##   tag                       file
-    ## 1 rre     credit_new_by_sector.R
-    ## 2 rre credit_stock_composition.R
+    ##   tag                               file
+    ## 1 rre             credit_new_by_sector.R
+    ## 2 rre         credit_stock_composition.R
+    ## 3 rre rre_rent_growth_for_eu_countries.R
 
 - Use the code in the R-files to make your own chart
 
@@ -78,3 +81,7 @@ update_index()
 ```
 
 - Feel free to create a pull request, if you want to share your code.
+
+## Contributors
+
+- [Franz X. Mohr](https://github.com/franzmohr)

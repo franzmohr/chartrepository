@@ -1,6 +1,5 @@
 ---
 title: "Code repository for macroeconomic charts using R"
-author: "Franx X. Mohr"
 output: github_document
 ---
 
@@ -13,6 +12,8 @@ knitr::opts_chunk$set(echo = TRUE)
 ### What this repository tries to do
 
 This is a repository of `R` code, which generates frequently used plots on macroeconomic topics based only publicly available data. Most of the plots rely on packages from the `tidyverse`. The intention is to support knowledge sharing - especially within the EU - and save programming time.
+
+An overview of available charts can be found in subfolder [`figures`](/figures).
 
 ### Motivation
 
@@ -62,4 +63,6 @@ update_index()
 
 * Feel free to create a pull request, if you want to share your code.
 
+## Contributors
 
+* [Franz X. Mohr](https://github.com/franzmohr)
