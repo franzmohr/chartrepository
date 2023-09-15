@@ -12,7 +12,7 @@ knowledge sharing - especially within the EU - and save programming
 time.
 
 An overview of available charts can be found in subfolder
-[`figures`](/figures)
+[`figures`](/figures).
 
 ### Motivation
 
