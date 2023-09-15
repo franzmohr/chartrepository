@@ -1,7 +1,12 @@
 # macro, credit, rre
 
+rm(list = ls())
+
 # Choose language
-lang <- "de" # "de" or "en"
+lang <- "en" # "de" or "en"
+
+# Choose country
+ctry <- "AT"
 
 # Load packages
 library(dplyr)
@@ -24,7 +29,7 @@ if (lang == "en") {
   temp_caption <- "Source: ECB-BSI. Counterparties within euro area."
 }
 
-temp <- ecb::get_data("BSI.M.AT.N.A.A20.A.1.U2.1000+2100+2210+2220+2240+2250.Z01.E") %>%
+temp <- ecb::get_data(paste0("BSI.M.", ctry,".N.A.A20.A.1.U2.1000+2100+2210+2220+2240+2250.Z01.E")) %>%
   filter(obstime >= "2018-01") %>%
   select(obstime, count_area, bs_count_sector, obsvalue) %>%
   pivot_wider(names_from = "bs_count_sector", values_from = "obsvalue") %>%

@@ -1,6 +1,10 @@
-# macro, interest
+# macro, interest, centralbank
 
 rm(list = ls())
+
+# Choose language
+lang <- "en"
+
 
 library(alfred)
 library(dplyr)
@@ -8,8 +12,6 @@ library(ecb)
 library(ggplot2)
 library(tidyr)
 library(zoo)
-
-lang <- "en"
 
 temp_var_levels <- c("EA", "US", "GB")
 if (lang == "de") {

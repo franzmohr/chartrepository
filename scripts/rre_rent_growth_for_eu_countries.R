@@ -2,15 +2,21 @@
 
 rm(list = ls())
 
+# Choose countries
+ctry_code <- c("AT", "DE", "ES", "FR", "EU27_2020")
+
+# Choose language
+lang <- "en"
+
+
+
 library(dplyr)
 library(eurostat)
 library(ggplot2)
 library(tidyr)
 library(zoo)
 
-ctry_code <- c("AT", "DE", "ES", "FR", "EU27_2020")
 
-lang <- "en"
 
 if (lang == "de") {
   ctry_labels <- c("Österreich", "Deutschland", "Spanien", "Frankreich", "EU (27)")

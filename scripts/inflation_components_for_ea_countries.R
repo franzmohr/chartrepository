@@ -2,15 +2,18 @@
 
 rm(list = ls())
 
+# Choose language
+lang <- "en"
+
+# Choose country
+ctry_code <- "AT"
+
 library(dplyr)
 library(eurostat)
 library(ggplot2)
 library(tidyr)
 library(zoo)
 
-ctry_code <- "AT"
-
-lang <- "en"
 
 if (lang == "de") {
   temp_var_labels <- c("Dienstleistungen", "Industriegüter ohne Energie",
