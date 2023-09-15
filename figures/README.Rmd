@@ -1,0 +1,17 @@
+---
+title: "Collection of charts"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r echo=FALSE, results='asis'}
+fig_list <- list.files()
+fig_list <- fig_list[grepl(".png", fig_list)]
+
+for (i in fig_list) {
+  cat("![", i,"](", i, ")")
+}
+```
