@@ -1,15 +1,16 @@
-Code repository for macroeconomic charts using R
+Code repository for macroeconomic charts
 ================
 
 ## Introduction
 
 ### What this repository tries to do
 
-This is a repository of `R` code, which generates frequently used plots
-on macroeconomic topics based only publicly available data. Most of the
-plots rely on packages from the `tidyverse`. The intention is to support
-knowledge sharing - especially within the EU - and save programming
-time.
+This is a code repository for scripts, which generate frequently used
+plots on macroeconomic topics based only on publicly available data. The
+intention is to support knowledge sharing and save programming time.
+
+The repository is platform agnostic, though `R` and `Python` code would
+are preferred.
 
 An overview of available charts can be found in subfolder
 [`figures`](/figures).
@@ -60,9 +61,10 @@ result
 ```
 
     ##   tag                               file
-    ## 1 rre             credit_new_by_sector.R
-    ## 2 rre         credit_stock_composition.R
-    ## 3 rre rre_rent_growth_for_eu_countries.R
+    ## 1 rre              bank_interest_rates.R
+    ## 2 rre             credit_new_by_sector.R
+    ## 3 rre         credit_stock_composition.R
+    ## 4 rre rre_rent_growth_for_eu_countries.R
 
 - Use the code in the R-files to make your own chart
 

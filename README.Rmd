@@ -1,5 +1,5 @@
 ---
-title: "Code repository for macroeconomic charts using R"
+title: "Code repository for macroeconomic charts"
 output: github_document
 ---
 
@@ -11,7 +11,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### What this repository tries to do
 
-This is a repository of `R` code, which generates frequently used plots on macroeconomic topics based only publicly available data. Most of the plots rely on packages from the `tidyverse`. The intention is to support knowledge sharing - especially within the EU - and save programming time.
+This is a code repository for scripts, which generate frequently used plots on macroeconomic topics based only on publicly available data. The intention is to support knowledge sharing and save programming time.
+
+The repository is platform agnostic, though `R` and `Python` code would are preferred.
 
 An overview of available charts can be found in subfolder [`figures`](/figures).
 
