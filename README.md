@@ -10,7 +10,7 @@ plots on macroeconomic topics based only on publicly available data. The
 intention is to support knowledge sharing and save programming time.
 
 The repository is platform agnostic, though `R` and `Python` code would
-are preferred.
+be preferred.
 
 An overview of available charts can be found in subfolder
 [`figures`](/figures).

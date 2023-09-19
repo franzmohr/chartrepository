@@ -3,6 +3,8 @@ title: "Collection of charts"
 output: github_document
 ---
 
+This page can be considered a catalogue with all the charts, for which code is available in subfolder [scripts](/scripts). The name to the top left of a chart corresponds to the filename of the respective script.
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
