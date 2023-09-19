@@ -12,6 +12,7 @@ fig_list <- list.files()
 fig_list <- fig_list[grepl(".png", fig_list)]
 
 for (i in fig_list) {
+  cat(i)
   cat("![", i,"](", i, ")")
 }
 ```

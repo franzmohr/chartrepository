@@ -30,3 +30,7 @@
 "rre","rre_rent_growth_for_eu_countries.R"
 "rent","rre_rent_growth_for_eu_countries.R"
 "inflation","rre_rent_growth_for_eu_countries.R"
+"macro","unemployment_projections_for_eu_countries.R"
+"forecast","unemployment_projections_for_eu_countries.R"
+"unemployment","unemployment_projections_for_eu_countries.R"
+"projection","unemployment_projections_for_eu_countries.R"
