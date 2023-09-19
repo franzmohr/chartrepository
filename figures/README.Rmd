@@ -7,7 +7,7 @@ output: github_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-```{r echo=FALSE, results='asis'}
+```{r echo=FALSE, results='asis', fig.height=3.2, fig.width=7}
 fig_list <- list.files()
 fig_list <- fig_list[grepl(".png", fig_list)]
 
