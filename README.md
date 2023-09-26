@@ -88,3 +88,4 @@ update_index()
 ## Contributors
 
 - [Franz X. Mohr](https://github.com/franzmohr)
+- Elizabeth Eckel
