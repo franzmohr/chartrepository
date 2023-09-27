@@ -9,21 +9,25 @@ lang <- "en"
 hlt <- c("AT", "EA")
 
 library(dplyr)
+library(eurostat)
 library(ecb)
 library(ggplot2)
 library(tidyr)
 library(zoo)
 
+# Get list of EA countries
+ea_ctry <- eu_countries$code
+
 if (lang == "de") {
   temp_title <- "Kredite an nicht-finanzielle Unternehmen"
   temp_subtitle <- "Bereinigtes Jahreswachstum in Prozent"
-  temp_caption <- "Quelle: EZB-BSI. Unkonsolidiert."
+  temp_caption <- "Quelle: EZB-BSI. Unkonsolidiert. Inländische Gegenparteien."
   temp_other <- "Andere"
 }
 if (lang == "en") {
   temp_title <- "Credit to non-financial corporations"
   temp_subtitle <- "Adjusted annual growth rate"
-  temp_caption <- "Source: ECB-BSI. Consolidated."
+  temp_caption <- "Source: ECB-BSI. Consolidated. Domestic counterparties."
   temp_other <- "Other"
 }
 
@@ -33,6 +37,7 @@ result <- get_data("BSI.M..N.A.A20.A.I.U6.2240.Z01.A") %>%
   rename(date = obstime,
          geo = ref_area,
          value = obsvalue) %>%
+  filter(geo %in% c(ea_ctry, "U2")) %>%
   mutate(date = as.Date(as.yearmon(date, "%Y-%m")),
          geo = case_when(geo == "U2" ~ "EA",
                          TRUE ~ geo),
