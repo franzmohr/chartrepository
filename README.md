@@ -61,12 +61,13 @@ result
 ```
 
     ##   tag                                          file
-    ## 1 rre bank_household_rre_credit_growth_line_chart.R
-    ## 2 rre                         bank_interest_rates.R
-    ## 3 rre                        credit_new_by_sector.R
-    ## 4 rre                    credit_stock_composition.R
-    ## 5 rre           rre_price_growth_for_eu_countries.R
-    ## 6 rre            rre_rent_growth_for_eu_countries.R
+    ## 1 rre     bank_credit_growth_by_sector_line_chart.R
+    ## 2 rre bank_household_rre_credit_growth_line_chart.R
+    ## 3 rre                         bank_interest_rates.R
+    ## 4 rre                        credit_new_by_sector.R
+    ## 5 rre                    credit_stock_composition.R
+    ## 6 rre           rre_price_growth_for_eu_countries.R
+    ## 7 rre            rre_rent_growth_for_eu_countries.R
 
 - Use the code in the R-files to make your own chart
 
