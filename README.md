@@ -90,4 +90,5 @@ update_index()
 ## Contributors
 
 - [Franz X. Mohr](https://github.com/franzmohr)
-- Elizabeth Eckel
+- [Elizabeth
+  Eckel](https://www.linkedin.com/in/elizabeth-eckel-5561b419a)
