@@ -1,0 +1,40 @@
+coicop,var_de,var_en
+CP011,Nahrungsmittel,Food
+CP0111,Brot und Getreideerzeugnisse,Bread and cereals
+CP0112,Fleisch,Meat
+CP0114,"Milch, Käse und Eier","Milk, cheese and eggs"
+CP021,Alkoholische Getränke,Alcoholic beverages
+CP022,Tabak,Tobacco
+CP031,Bekleidung,Clothing
+CP0312,Bekleidungsartikel,Garments
+CP041,Wohnungsmieten,Actual rents for housing
+CP0411,Gezahlte Wohnungsmieten,Actual rents paid by tenants
+CP044,Wasserversorgung und sons-\ntige Dienstleistungen i.Z.m.\nder Wohnung,Water supply and\nmiscellaneous services\nrelating to the dwelling
+CP0444,Sonstige Dienstleistungen im Zu-\nsammenhang mit der Wohnung,Other services relating to the dwelling
+CP045,"Elektrizität, Gas und andere Brennstoffe","Electricity, gas and other fuels"
+CP0451,Elektrizität,Electricity
+CP0452,Gas,Gas
+CP0453,Flüssige Brennstoffe,Liquid fuels
+CP0454,Feste Brennstoffe,Solid fuels
+CP0455,Wärmeenergie,Heat energy
+CP051,"Einrichtungsgegenstände,\nBodenbeläge und\nReparaturen","Furniture and furnishings, carpets and other floor coverings"
+CP0511,Möbel und andere\nEinrichtungsgegenstände,Furniture and furnishings
+CP056,Waren und Dienst-\nleistungen für die lauf-\nende Haushaltsführung,Goods and services for\nroutine household\nmaintenance
+CP071,Kauf von Kraftfahrzeugen,Purchase of vehicles
+CP0711,Neue und gebrauchte Kraftfahrzeuge,Motor cars
+CP072,Betrieb von privaten Verkehrsmitteln,Operation of personal transport equipment
+CP0722,Kraft- und Schmierstoffe,Fuels and lubricants for personal transport equipment
+CP0723,Instandhaltung und Reparatur,Maintenance and repair of personal transport equipment
+CP073,Verkehrsleistungen,Transport services
+CP093,"Sonstige Freizeitartikel u.\n-geräte, Gartenartikel\nu. Heimtiere","Other recreational items\nand equipment,\ngardens and pets"
+CP094,Freizeit- und Kultur-\ndienstleistungen,Recreational and cultural services
+CP0941,Freizeit- und Sport-\ndienstleistungen,Recreational and sporting services
+CP095,"Zeitungen, Bücher und\nSchreibwaren","Newspapers, books\nand stationery"
+CP096,Pauschalreisen,Package holidays
+CP111,Catering-Dienstleistungen,Catering services
+CP1111,"Restaurants, Cafés\nund dergleichen","Restaurants, cafés\nand the like"
+CP112,Beherbergungsleistungen,Accomodation services
+CP121,Körperpflege,Personal care
+CP124,Sozialschutz,Social protection
+CP125,Versicherungen,Insurance
+TOT_X_NRG_FOOD,Kerninflation,Core inflation
