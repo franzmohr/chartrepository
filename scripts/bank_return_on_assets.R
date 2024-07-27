@@ -6,8 +6,8 @@ rm(list = ls())
 lang <- "en"
 
 # Choose countries
-ctry_ecb <- c("U2", "AT", "DE")
-ctry <- c("Euro area", "Austria", "Germany")
+ctry_ecb <- c("U2", "AT", "DE", "FR")
+ctry <- c("Euro area", "Austria", "Germany", "France")
 
 
 library(dplyr)
@@ -39,7 +39,8 @@ result <- raw %>%
          geo = ref_area,
          value = obsvalue) %>%
   filter(!is.na(value)) %>%
-  mutate(yr = substring(date, 1, 4)) %>%
+  mutate(yr = substring(date, 1, 4),
+         value = value / 100) %>%
   group_by(geo) %>%
   mutate(maxyr = max(yr)) %>%
   group_by(yr, geo) %>%
@@ -85,4 +86,4 @@ g <- ggplot(result, aes(x = qr, y = value, group = yr)) +
 
 g
 
-ggsave(g, filename = "figures/bank_return_on_assets.png", height = 3.5, width = 8)
+ggsave(g, filename = "figures/bank_return_on_assets.png", height = 6, width = 6)

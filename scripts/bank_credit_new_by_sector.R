@@ -16,12 +16,12 @@ library(zoo)
 
 
 if (lang == "de") {
-  temp_name_labels <- c("Unternehmenskredite", "Haushalte: Wohnbau", "Haushalte: Konsum", "Haushalte: Sonstige")
+  temp_name_labels <- c("Unternehmenskredite", "Haushalte:\nWohnbau", "Haushalte:\nKonsum", "Haushalte:\nSonstige")
   temp_y <- "Neukredite in Mrd EUR"
   temp_caption <- "Quelle: EZB-MIR. Reines Neugeschäft."
 }
 if (lang == "en") {
-  temp_name_labels <- c("Non-financial corporates", "Household: House purchase", "Household: Consumption", "Household: Other")
+  temp_name_labels <- c("Non-financial\ncorporates", "Household:\nHouse purchase", "Household:\nConsumption", "Household:\nOther")
   temp_y <- "New loans in bn EUR"
   temp_caption <- "Source: ECB-MIR. Pure new loans."
 }
@@ -44,4 +44,4 @@ g <- ggplot(temp, aes(x = date, y = value, fill = name)) +
 
 g
 
-ggsave(g, filename = "figures/credit_new_by_sector.png", width = 7)
+ggsave(g, filename = "figures/bank_credit_new_by_sector.png", height = 2.5, width = 7)
