@@ -68,6 +68,8 @@
 "services","ecsurvey_68_services_realestate_main.R"
 "ecsurvey","ecsurvey_93_services_recreation_main.R"
 "recreation","ecsurvey_93_services_recreation_main.R"
+"macro","employment_by_sector.R"
+"employment","employment_by_sector.R"
 "macro","gdp_growth_medusa.R"
 "forecast","gdp_growth_medusa.R"
 "gdp","gdp_growth_medusa.R"
